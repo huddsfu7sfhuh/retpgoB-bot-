@@ -12,4 +12,4 @@ console.log("log");
   console.log('---------------')
 });
 
-client.login(process.env.BOT_TOKEN); 
+client.login("NTA5MzA0MDg3OTk3NzEwMzM5.DsMufQ.-fMKZ9Cs69f3jHjy6vnVtMMHvbk");
