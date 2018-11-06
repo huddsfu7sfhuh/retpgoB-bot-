@@ -11,6 +11,7 @@ console.log("log");
   console.log(' Bot Is Online')
   console.log('---------------')
 });
+
 client.on('message', message => {
    let embed = new Discord.RichEmbed()
 
