@@ -18,7 +18,7 @@ client.on('message', msg => {
 }
 })
 client.on('ready', () => { //code bot not leave room voice //Bot Is Online
-    client.channels.get("ايدي الروم").join(); //by : iBeAnthonyD
+    client.channels.get("487956114194038787").join(); //by : iBeAnthonyD
     });
 
 client.login(process.env.BOT_TOKEN); 
