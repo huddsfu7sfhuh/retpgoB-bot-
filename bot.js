@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const Util = require('discord.js');
     client = new Discord.Client({sisableEveryone: true})
- const devs = ['yout id'];
+ const devs = ['507138559640076294'];
 const adminprefix = "!";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
