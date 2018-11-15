@@ -1,24 +1,35 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
+const Discord = require('discord.js');
+
+const Util = require('discord.js');
+    client = new Discord.Client({sisableEveryone: true})
+ const devs = ['yout id'];
+const adminprefix = "!";
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
+    client.user.setGame(argresult);
+      message.channel.sendMessage(`**  ${argresult} تم تغيير الحاله الي ✅**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'wt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.sendMessage(`**  ${argresult} تم تغيير الحاله الي ✅**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'ls')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.sendMessage(`**  ${argresult} تم تغيير الحاله الي ✅**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/Taaino");
+      message.channel.sendMessage(`**  ${argresult} تم تغيير الحاله الي ✅**`)
+  }
+  });
+
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`👊 `,"http://twitch.tv/X_Xz")
-client.user.setStatus("Online")
+
+console.log('taino');
+
 });
 
-client.on('message', msg => {
-
-    if (msg.content == '$join') {
-        if (msg.member.voiceChannel) {
-
-     if (msg.member.voiceChannel.joinable) {
-         msg.member.voiceChannel.join().then(msg.react('✅'));
-     }
-    }
-}
-})
-client.on('ready', () => { //code bot not leave room voice //Bot Is Online
-    client.channels.get("487956114194038787").join(); //by : iBeAnthonyD
-    });
-
-client.login(process.env.BOT_TOKEN); 
+client.login(process.env.BOT_TOKEN);
